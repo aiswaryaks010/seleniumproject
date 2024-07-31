@@ -1,4 +1,4 @@
-package utilitiespackage;
+package excelutilities;
 
 import java.io.FileInputStream;
 
@@ -6,11 +6,9 @@ import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import basepackage.magnetobase;
+public class magnetoexcel {
 
-public class excelmagneto extends magnetobase
-{
-
+	
 	public static String getcellvalue(String pg,String sheet,int r,int c)
 	{
 		try
@@ -45,7 +43,5 @@ public class excelmagneto extends magnetobase
 			return 0;
 		}
 	}
-	
-	
 	
 }

@@ -1,10 +1,10 @@
 package testpackage;
 
 import org.testng.annotations.Test;
-
 import basepackage.magnetobase;
+import excelutilities.magnetoexcel;
 import pagepackage.magnetopage;
-import utilities.excelmagneto;
+
 
 public class magnetotest extends magnetobase
 {
@@ -15,12 +15,12 @@ public class magnetotest extends magnetobase
 		magnetopage m1=new magnetopage();
 	    String pg = "C:\\Users\\user\\OneDrive\\Desktop\\magneto.xlsx";
 	    String sheet="Sheet1";
-	    int rowCount=utilitiespackage.excelmagneto.getrowcount(pg, sheet);
+	    int rowCount=magnetoexcel.getrowcount(pg, sheet);
 	    for(int i=1;i<=rowCount;i++)
 	    {
-	    	String email=utilitiespackage.excelmagneto.getcellvalue(pg, sheet, i, 0);
+	    	String email=magnetoexcel.getcellvalue(pg, sheet, i, 0);
 	    	System.out.println("USERNAME="+email);
-	    	String password=utilitiespackage.excelmagneto.getcellvalue(pg, sheet, i, 1);
+	    	String password=magnetoexcel.getcellvalue(pg, sheet, i, 1);
 	    	System.out.println("PASSWORD="+password);
 	    	
 	    	Thread.sleep(2000);
@@ -28,6 +28,7 @@ public class magnetotest extends magnetobase
 	    	m1.addproduct();
 	    	m1.cart();
 	    }
+	
 	}
 	
 	
